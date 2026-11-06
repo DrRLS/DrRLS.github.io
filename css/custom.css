@@ -1,0 +1,42 @@
+/* Site-specific changes, loaded after the compiled theme CSS. */
+
+/* Landing page peaks: pinned to the bottom of the window on the first screen,
+   then settling where the About section ends, right above the next section.
+   The About section always fills at least the first screen (50px is the menu bar). */
+.wg-v1\/about {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  min-height: calc(100vh - 50px);
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.wg-v1\/about .container {
+  margin-bottom: 3rem;
+}
+
+.wg-v1\/about .peaks {
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
+  flex: none;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: auto;
+  pointer-events: none;
+  /* Text fades out as it passes under the peaks. Same colour as the section, so it can't be seen at rest. */
+  padding-top: 2rem;
+  background: linear-gradient(to bottom, rgba(240, 248, 255, 0), #f0f8ff 45%);
+}
+
+/* Education: the title on top, then where and when, in the same order on every row. */
+ul.ul-edu li .description p.course {
+  font-weight: 700;
+}
+
+.ul-edu .edu-year {
+  white-space: nowrap;
+}

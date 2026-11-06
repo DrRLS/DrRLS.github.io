@@ -1,3 +1,3 @@
 User-agent: *
 
-Sitemap: https://DrRLS.github.io/sitemap.xml
+Sitemap: https://info.drrls.com/sitemap.xml
